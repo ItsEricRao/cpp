@@ -1,0 +1,34 @@
+#include <bits/stdc++.h>
+using namespace std;
+const int MAXN = 1e5 + 10;
+vector<int> hi;
+
+int lds(vector<int> hi) {
+    vector<int> tails;
+    for (int i : hi) {
+        auto it = lower_bound(tails.begin(), tails.end(), i, greater<int>());
+        if (it == tails.end()) tails.push_back(i);
+        else *it = i;
+    }
+    return tails.size();
+}
+
+int lnds(vector<int> hi) {
+    vector<int> tails;
+    for (int i : hi) {
+        auto it = lower_bound(tails.begin(), tails.end(), i);
+        if (it == tails.end()) tails.push_back(i);
+        else *it = i;
+    }
+    return tails.size();
+}
+
+int main() {
+    int num, cnt = 0;
+    while (cin >> num) {
+        hi.push_back(num);
+    }
+    cout << lds(hi) << endl;
+    cout << lnds(hi) << endl;
+    return 0;
+}
