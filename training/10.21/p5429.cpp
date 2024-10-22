@@ -21,6 +21,8 @@ void dfs(int curr) {
 
 int main() {
     ios::sync_with_stdio(false);
+    cin.tie(nullptr);
+    cout.tie(nullptr);
     cin >> n >> m;
     cows.resize(n);
     for (Cow &c : cows) {
