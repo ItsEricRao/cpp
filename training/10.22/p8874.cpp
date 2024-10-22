@@ -23,8 +23,8 @@ int main() {
     memset(p, -1, sizeof(p));
     cin >> n >> m >> q >> l;
     f[0] = f[1] = m;
-    for (int i = 0; i < n; i++) {
-        for (int j = 1; j <= l; j++) {
+    for (int i = 1; i <= n; i++) {
+        for (int j = 0; j < l; j++) {
             cin >> c[i][j];
         }
     }
