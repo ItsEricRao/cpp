@@ -13,7 +13,7 @@ int lds(vector<int> hi) {
     return tails.size();
 }
 
-int lnds(vector<int> hi) {
+int lis(vector<int> hi) {
     vector<int> tails;
     for (int i : hi) {
         auto it = lower_bound(tails.begin(), tails.end(), i, less<int>());
@@ -29,6 +29,6 @@ int main() {
         hi.push_back(num);
     }
     cout << lds(hi) << endl;
-    cout << lnds(hi) << endl;
+    cout << lis(hi) << endl;
     return 0;
 }
