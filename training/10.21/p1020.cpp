@@ -16,7 +16,7 @@ int lds(vector<int> hi) {
 int lis(vector<int> hi) {
     vector<int> tails;
     for (int i : hi) {
-        auto it = upper_bound(tails.begin(), tails.end(), i, less<int>());
+        auto it = lower_bound(tails.begin(), tails.end(), i);
         if (it == tails.end()) tails.push_back(i);
         else *it = i;
     }
