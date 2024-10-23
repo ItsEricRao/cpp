@@ -8,10 +8,10 @@ void solve() {
     for (int i = 0; i < len; i++) {
         switch (stp[i]) {
         case '1':
-            char a1, b1, c1;
-            a1 = rubik[0][0][2];
-            b1 = rubik[0][1][2];
-            c1 = rubik[0][2][2];
+            char a, b, c;
+            a = rubik[0][0][2];
+            b = rubik[0][1][2];
+            c = rubik[0][2][2];
 
             rubik[0][0][2] = rubik[5][0][2];
             rubik[0][1][2] = rubik[5][1][2];
@@ -25,28 +25,27 @@ void solve() {
             rubik[1][1][2] = rubik[4][1][2];
             rubik[1][2][2] = rubik[4][2][2];
 
-            rubik[4][0][2] = a1;
-            rubik[4][1][2] = b1;
-            rubik[4][2][2] = c1;
+            rubik[4][0][2] = a;
+            rubik[4][1][2] = b;
+            rubik[4][2][2] = c;
 
-            a1 = rubik[3][0][0];
+            a = rubik[3][0][0];
             rubik[3][0][0] = rubik[3][2][0];
             rubik[3][2][0] = rubik[3][2][2];
             rubik[3][2][2] = rubik[3][0][2];
+            rubik[3][0][2] = a;
 
-            a1 = rubik[3][0][1];
+            a = rubik[3][0][1];
             rubik[3][0][1] = rubik[3][1][0];
             rubik[3][1][0] = rubik[3][2][1];
             rubik[3][2][1] = rubik[3][1][2];
-            rubik[3][1][2] = a1;
-
+            rubik[3][1][2] = a;
             break;
 
         case '2':
-            char a2, b2, c2;
-            a2 = rubik[0][0][2];
-            b2 = rubik[0][1][2];
-            c2 = rubik[0][2][2];
+            a = rubik[0][0][2];
+            b = rubik[0][1][2];
+            c = rubik[0][2][2];
 
             rubik[0][0][2] = rubik[4][0][2];
             rubik[0][1][2] = rubik[4][1][2];
@@ -60,29 +59,28 @@ void solve() {
             rubik[1][1][2] = rubik[5][1][2];
             rubik[1][2][2] = rubik[5][2][2];
 
-            rubik[5][0][2] = a2;
-            rubik[5][1][2] = b2;
-            rubik[5][2][2] = c2;
+            rubik[5][0][2] = a;
+            rubik[5][1][2] = b;
+            rubik[5][2][2] = c;
 
-            a2 = rubik[3][0][0];
+            a = rubik[3][0][0];
             rubik[3][0][0] = rubik[3][0][2];
             rubik[3][0][2] = rubik[3][2][2];
             rubik[3][2][2] = rubik[3][2][0];
-            rubik[3][2][0] = a2;
+            rubik[3][2][0] = a;
 
-            b2 = rubik[3][0][1];
+            b = rubik[3][0][1];
             rubik[3][0][1] = rubik[3][1][2];
             rubik[3][1][2] = rubik[3][2][1];
             rubik[3][2][1] = rubik[3][1][0];
-            rubik[3][1][0] = b2;
+            rubik[3][1][0] = b;
 
             break;
-        
+
         case '3':
-            char a3, b3, c3;
-            a3 = rubik[0][0][0];
-            b3 = rubik[0][0][1];
-            c3 = rubik[0][0][2];
+            a = rubik[0][0][0];
+            b = rubik[0][0][1];
+            c = rubik[0][0][2];
 
             rubik[0][0][0] = rubik[2][0][0];
             rubik[0][0][1] = rubik[2][0][1];
@@ -96,57 +94,56 @@ void solve() {
             rubik[1][0][1] = rubik[3][0][1];
             rubik[1][0][2] = rubik[3][0][2];
 
-            rubik[3][0][0] = a3;
-            rubik[3][0][1] = b3;
-            rubik[3][0][2] = c3;
+            rubik[3][0][0] = a;
+            rubik[3][0][1] = b;
+            rubik[3][0][2] = c;
 
-            a3 = rubik[4][0][0];
+            a = rubik[4][0][0];
             rubik[4][0][0] = rubik[4][2][0];
             rubik[4][2][0] = rubik[4][2][2];
             rubik[4][2][2] = rubik[4][0][2];
-            rubik[4][0][2] = a3;
+            rubik[4][0][2] = a;
 
-            b3 = rubik[4][0][1];
+            b = rubik[4][0][1];
             rubik[4][0][1] = rubik[4][1][0];
             rubik[4][1][0] = rubik[4][2][1];
             rubik[4][2][1] = rubik[4][1][2];
-            rubik[4][1][2] = b3;
+            rubik[4][1][2] = b;
 
             break;
 
         case '4':
-            char a4, b4, c4;
-            a4 = rubik[0][0][0];
-            b4 = rubik[0][0][1];
-            c4 = rubik[0][0][2];
+            a = rubik[0][0][0];
+            b = rubik[0][0][1];
+            c = rubik[0][0][2];
 
             rubik[0][0][0] = rubik[3][0][0];
             rubik[0][0][1] = rubik[3][0][1];
             rubik[0][0][2] = rubik[3][0][2];
 
-            rubik[3][0][0] = rubik[2][0][0];
-            rubik[3][0][1] = rubik[2][0][1];
-            rubik[3][0][2] = rubik[2][0][2];
+            rubik[3][0][0] = rubik[1][0][0];
+            rubik[3][0][1] = rubik[1][0][1];
+            rubik[3][0][2] = rubik[1][0][2];
 
             rubik[1][0][0] = rubik[2][0][0];
             rubik[1][0][1] = rubik[2][0][1];
             rubik[1][0][2] = rubik[2][0][2];
 
-            rubik[2][0][0] = a4;
-            rubik[2][0][1] = b4;
-            rubik[2][0][2] = c4;
+            rubik[2][0][0] = a;
+            rubik[2][0][1] = b;
+            rubik[2][0][2] = c;
 
-            a4 = rubik[4][0][0];
+            a = rubik[4][0][0];
             rubik[4][0][0] = rubik[4][0][2];
             rubik[4][0][2] = rubik[4][2][2];
             rubik[4][2][2] = rubik[4][2][0];
-            rubik[4][2][0] = a4;
+            rubik[4][2][0] = a;
 
-            b4 = rubik[4][0][1];
+            b = rubik[4][0][1];
             rubik[4][0][1] = rubik[4][1][2];
             rubik[4][1][2] = rubik[4][2][1];
             rubik[4][2][1] = rubik[4][1][0];
-            rubik[4][1][0] = b4;
+            rubik[4][1][0] = b;
 
             break;
         default:
